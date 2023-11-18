@@ -7,6 +7,5 @@ node_modules
 .cdk.staging
 cdk.out
 
-bin/*
-release/*
-obj/*
+apps/bin
+apps/obj
