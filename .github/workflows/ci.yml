@@ -25,9 +25,9 @@ jobs:
       working-directory: ./infra
       run: npm test
 
-    # - name: Run CDK Synth
-    #   working-directory: ./infra
-    #   run: npx cdk synth
+    - name: Run CDK Synth
+      working-directory: ./infra
+      run: npx cdk synth
 
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
