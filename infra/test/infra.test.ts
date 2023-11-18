@@ -1,17 +1,27 @@
-// import * as cdk from 'aws-cdk-lib';
-// import { Template } from 'aws-cdk-lib/assertions';
-// import * as Infra from '../lib/infra-stack';
+import * as cdk from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
+import * as Infra from '../lib/infra-stack';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
-// example test. To run these tests, uncomment this file along with the
-// example resource in lib/infra-stack.ts
-test('SQS Queue Created', () => {
-//   const app = new cdk.App();
-//     // WHEN
-//   const stack = new Infra.InfraStack(app, 'MyTestStack');
-//     // THEN
-//   const template = Template.fromStack(stack);
 
-//   template.hasResourceProperties('AWS::SQS::Queue', {
-//     VisibilityTimeout: 300
-//   });
+test('Lambda Function Created with Correct Configuration', () => {
+    const app = new cdk.App();
+    const stack = new Infra.InfraStackNew(app, 'MyTestStack');
+
+    // Prepare the stack for assertions.
+    const template = Template.fromStack(stack);
+    template.hasResourceProperties("AWS::Lambda::Function", {
+        Handler: "TestAPI"
+    });
 });
+
+test('Stack has correct number of resources', () => {
+    const app = new cdk.App();
+    const stack = new Infra.InfraStackNew(app, 'MyTestStack');
+
+    // Prepare the stack for assertions.
+    const template = Template.fromStack(stack);
+    expect(template.allResources.length).toBe(2); // Assuming there are 2 resources in the stack
+});
+
+
