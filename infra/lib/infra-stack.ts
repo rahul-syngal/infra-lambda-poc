@@ -9,7 +9,7 @@ export class InfraStackNew extends cdk.Stack {
 
         const lambdaFunction = new lambda.Function(this, 'YourLambdaFunction', {
           runtime: lambda.Runtime.DOTNET_6, // or appropriate runtime
-          code: lambda.Code.fromAsset('../apps/TestAPIe/', {
+          code: lambda.Code.fromAsset('../apps/TestAPI/', {
             bundling: {
               image: lambda.Runtime.DOTNET_6.bundlingImage,
               user: "root",
@@ -23,7 +23,7 @@ export class InfraStackNew extends cdk.Stack {
               ],
             },
           }),
-          handler: 'TestAPIe',
+          handler: 'TestAPI',
     });
 
     const api = new apigateway.LambdaRestApi(this, 'myapi', {
