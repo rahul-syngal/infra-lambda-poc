@@ -34,8 +34,8 @@ jobs:
       with:
         dotnet-version: '6.0' # Or the version you use
 
-    - name: Publish .NET Project
-      run: dotnet publish ./apps/TestAPI/TestApi.csproj
+    - name: Build .NET Project
+      run: dotnet build ./apps/TestAPI/TestAPI.csproj --configuration Release
 
         
     # - name: Publish .NET Project
