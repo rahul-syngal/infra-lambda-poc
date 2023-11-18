@@ -1,18 +1,17 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v6.0/linux-x64",
+    "name": ".NETCoreApp,Version=v6.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v6.0": {},
-    ".NETCoreApp,Version=v6.0/linux-x64": {
-      "TestAPIe/1.0.0": {
+    ".NETCoreApp,Version=v6.0": {
+      "TestAPI/1.0.0": {
         "dependencies": {
           "Amazon.Lambda.AspNetCoreServer.Hosting": "1.3.0"
         },
         "runtime": {
-          "TestAPIe.dll": {}
+          "TestAPI.dll": {}
         }
       },
       "Amazon.Lambda.APIGatewayEvents/2.4.1": {
@@ -146,7 +145,7 @@
     }
   },
   "libraries": {
-    "TestAPIe/1.0.0": {
+    "TestAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

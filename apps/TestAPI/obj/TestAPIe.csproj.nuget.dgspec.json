@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/asset-input/TestAPIe.csproj": {}
+    "/Users/rahulsyngal/Projects/infra-lambda-poc/apps/TestAPI/TestAPIe.csproj": {}
   },
   "projects": {
-    "/asset-input/TestAPIe.csproj": {
+    "/Users/rahulsyngal/Projects/infra-lambda-poc/apps/TestAPI/TestAPIe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/asset-input/TestAPIe.csproj",
+        "projectUniqueName": "/Users/rahulsyngal/Projects/infra-lambda-poc/apps/TestAPI/TestAPIe.csproj",
         "projectName": "TestAPIe",
-        "projectPath": "/asset-input/TestAPIe.csproj",
-        "packagesPath": "/tmp/dotnet/.nuget/packages/",
-        "outputPath": "/asset-input/obj/",
+        "projectPath": "/Users/rahulsyngal/Projects/infra-lambda-poc/apps/TestAPI/TestAPIe.csproj",
+        "packagesPath": "/Users/rahulsyngal/.nuget/packages/",
+        "outputPath": "/Users/rahulsyngal/Projects/infra-lambda-poc/apps/TestAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/tmp/dotnet/.nuget/NuGet/NuGet.Config"
+          "/Users/rahulsyngal/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -56,20 +56,16 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.AspNetCore.App.Runtime.osx-arm64",
+              "version": "[6.0.24, 6.0.24]"
             },
             {
-              "name": "Microsoft.NETCore.App.Crossgen2.linux-arm64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.NETCore.App.Crossgen2.osx-arm64",
+              "version": "[6.0.24, 6.0.24]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[6.0.25, 6.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
-              "version": "[6.0.25, 6.0.25]"
+              "name": "Microsoft.NETCore.App.Runtime.osx-arm64",
+              "version": "[6.0.24, 6.0.24]"
             }
           ],
           "frameworkReferences": {
@@ -80,11 +76,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/var/lang/bin/sdk/6.0.417/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {
-        "linux-x64": {
+        "osx-arm64": {
           "#import": []
         }
       }

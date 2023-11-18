@@ -7,14 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {},
     ".NETCoreApp,Version=v6.0/osx-arm64": {
-      "TestAPIe/1.0.0": {
+      "TestAPI/1.0.0": {
         "dependencies": {
           "Amazon.Lambda.AspNetCoreServer.Hosting": "1.3.0",
           "runtimepack.Microsoft.NETCore.App.Runtime.osx-arm64": "6.0.24",
           "runtimepack.Microsoft.AspNetCore.App.Runtime.osx-arm64": "6.0.24"
         },
         "runtime": {
-          "TestAPIe.dll": {}
+          "TestAPI.dll": {}
         }
       },
       "runtimepack.Microsoft.NETCore.App.Runtime.osx-arm64/6.0.24": {
@@ -1380,7 +1380,7 @@
     }
   },
   "libraries": {
-    "TestAPIe/1.0.0": {
+    "TestAPI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

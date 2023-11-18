@@ -1,10 +1,10 @@
-import * as cdk from '@aws-cdk/core';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as apigateway from '@aws-cdk/aws-apigateway';
-import { BundlingOutput } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
+import * as cdk from 'aws-cdk-lib';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
+import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 
 export class InfraStackNew extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
         const lambdaFunction = new lambda.Function(this, 'YourLambdaFunction', {
@@ -28,7 +28,10 @@ export class InfraStackNew extends cdk.Stack {
 
     const api = new apigateway.LambdaRestApi(this, 'myapi', {
       handler: lambdaFunction,
-      proxy: true
+      proxy: false
     });
+
+    const items = api.root.addResource('weatherForecast');
+    items.addMethod('GET');
   }
 }

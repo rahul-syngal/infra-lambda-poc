@@ -875,9 +875,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/asset-input/TestAPIe.csproj",
-      "projectName": "TestAPIe",
-      "projectPath": "/asset-input/TestAPIe.csproj",
+      "projectUniqueName": "/asset-input/TestAPI.csproj",
+      "projectName": "TestAPI",
+      "projectPath": "/asset-input/TestAPI.csproj",
       "packagesPath": "/tmp/dotnet/.nuget/packages/",
       "outputPath": "/asset-input/obj/",
       "projectStyle": "PackageReference",

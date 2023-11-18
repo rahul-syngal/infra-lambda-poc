@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oaPzaBeZNf3wRE+j2euEo3Zz5ngKQWtu/3VHNGPizxjb2sfnBzY9tbNvgg7gCX4qIlqn8vTK5qvn7dhpszDNHw==",
+  "dgSpecHash": "idUsYatRPnkHta12UKId9sUYeUbj0oFWCf0Yj1f6bhDiazZbaEQGuQnNcElGe0UtHS4jzizDggAwmUDgx9VRnw==",
   "success": true,
-  "projectFilePath": "/asset-input/TestAPIe.csproj",
+  "projectFilePath": "/asset-input/TestAPI.csproj",
   "expectedPackageFiles": [
     "/tmp/dotnet/.nuget/packages/amazon.lambda.apigatewayevents/2.4.1/amazon.lambda.apigatewayevents.2.4.1.nupkg.sha512",
     "/tmp/dotnet/.nuget/packages/amazon.lambda.applicationloadbalancerevents/2.1.0/amazon.lambda.applicationloadbalancerevents.2.1.0.nupkg.sha512",
