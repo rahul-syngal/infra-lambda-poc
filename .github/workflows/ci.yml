@@ -34,6 +34,9 @@ jobs:
       with:
         dotnet-version: '6.0' # Or the version you use
 
+    - name: Adjust Permissions
+      run: chmod -R 777 ./apps/TestAPI/TestAPI.csproj
+
     - name: Clean and Build .NET Project
       run: |
         dotnet clean ./apps/TestAPI/TestAPI.csproj --configuration Release
