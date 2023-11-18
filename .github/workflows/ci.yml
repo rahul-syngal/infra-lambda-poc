@@ -1,4 +1,4 @@
-name: CI Workflow
+name: TESTAPI CI Workflow
 
 on:
   pull_request:
@@ -26,6 +26,7 @@ jobs:
       run: npm test
 
     - name: Run CDK Synth
+      working-directory: ./infra
       run: npx cdk synth
 
     - name: Set up .NET Core
@@ -33,4 +34,10 @@ jobs:
       with:
         dotnet-version: '6' # Or the version you use
 
-    # Add any other steps you might need, like deploying to AWS
+    - name: Build .NET Project
+      working-directory: ./apps/TestAPI
+      run: dotnet build --configuration Release
+
+    - name: Publish .NET Project
+      working-directory: ./apps/TestAPI
+      run: dotnet publish -c Release
