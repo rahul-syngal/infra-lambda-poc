@@ -18,10 +18,8 @@ jobs:
         node-version: '14' # Or the version you use
 
     - name: Install NPM dependencies
+      working-directory: ./infra
       run: npm install
-
-    - name: Install NPM Jest
-      run: npm install jest
 
     - name: Run NPM tests
       working-directory: ./infra
