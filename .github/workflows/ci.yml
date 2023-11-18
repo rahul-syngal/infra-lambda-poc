@@ -34,10 +34,15 @@ jobs:
       with:
         dotnet-version: '6.0' # Or the version you use
 
-    # - name: Build .NET Project
-    #   working-directory: ./apps/TestAPI
-    #   run: dotnet build --configuration Release
+    - name: Publish .NET Project
+      working-directory: ./apps/TestAPI
+      run: dotnet publish ./apps/TestApi/TestApi.csproj \
+        --verbosity normal \
+        --no-restore \
+        --no-self-contained \
+        -c:Release
 
+        
     # - name: Publish .NET Project
     #   working-directory: ./apps/TestAPI
     #   run: dotnet publish -c Release
