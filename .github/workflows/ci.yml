@@ -36,7 +36,7 @@ jobs:
 
     - name: Publish .NET Project
       working-directory: ./apps/TestAPI
-      run: dotnet publish ./apps/TestApi/TestApi.csproj \
+      run: dotnet publish TestApi.csproj \
         --verbosity normal \
         --no-restore \
         --no-self-contained \
