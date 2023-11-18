@@ -34,9 +34,10 @@ jobs:
       with:
         dotnet-version: '6.0' # Or the version you use
 
-    - name: Build .NET Project
-      run: dotnet build ./apps/TestAPI/TestAPI.csproj --configuration Release
-
+    - name: Clean and Build .NET Project
+      run: |
+        dotnet clean ./apps/TestAPI/TestAPI.csproj --configuration Release
+        dotnet build ./apps/TestAPI/TestAPI.csproj --configuration Release
         
     # - name: Publish .NET Project
     #   working-directory: ./apps/TestAPI
