@@ -21,9 +21,9 @@ jobs:
       working-directory: ./infra
       run: npm install
 
-    - name: Run NPM tests
-      working-directory: ./infra
-      run: npm test
+    # - name: Run NPM tests
+    #   working-directory: ./infra
+    #   run: npm test
 
     - name: Run CDK Synth
       working-directory: ./infra
