@@ -21,6 +21,10 @@ jobs:
       working-directory: ./infra
       run: npm install
 
+    - name: Install NPM esbuild
+      working-directory: ./infra
+      run: npm i -g esbuild
+
     - name: Run NPM tests
       working-directory: ./infra
       run: npm test
