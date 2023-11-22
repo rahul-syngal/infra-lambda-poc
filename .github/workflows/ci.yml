@@ -1,4 +1,4 @@
-name: CI Workflow
+name: TESTAPI CI Workflow
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout Repo
@@ -15,20 +15,30 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Or the version you use
+        node-version: '16' # Or the version you use
 
     - name: Install NPM dependencies
+      working-directory: ./infra
       run: npm install
 
     - name: Run NPM tests
+      working-directory: ./infra
       run: npm test
 
     - name: Run CDK Synth
+      working-directory: ./infra
       run: npx cdk synth
 
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6' # Or the version you use
+        dotnet-version: '6.0' # Or the version you use
 
-    # Add any other steps you might need, like deploying to AWS
+    - name: Clean and Build .NET Project
+      run: |
+        dotnet clean ./apps/TestAPI/TestAPI.csproj --configuration Release
+        dotnet build ./apps/TestAPI/TestAPI.csproj --configuration Release
+        
+    - name: Publish .NET Project
+      working-directory: ./apps/TestAPI
+      run: dotnet publish -c Release

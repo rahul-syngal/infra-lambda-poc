@@ -5,7 +5,7 @@ import * as apigateway from 'aws-cdk-lib/aws-apigateway';
 
 export class InfraStackNew extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
-    super(scope, id, props);
+    super(scope, id, props); 
 
         const lambdaFunction = new lambda.Function(this, 'YourLambdaFunction', {
           runtime: lambda.Runtime.DOTNET_6, // or appropriate runtime
