@@ -39,6 +39,6 @@ jobs:
         dotnet clean ./apps/TestAPI/TestAPI.csproj --configuration Release
         dotnet build ./apps/TestAPI/TestAPI.csproj --configuration Release
         
-    # - name: Publish .NET Project
-    #   working-directory: ./apps/TestAPI
-    #   run: dotnet publish -c Release
+    - name: Publish .NET Project
+      working-directory: ./apps/TestAPI
+      run: dotnet publish -c Release
